@@ -1,2 +1,2 @@
-# ccpbnbua1_dog_game
+# Dog Game
 A game for control the dog in the screen
