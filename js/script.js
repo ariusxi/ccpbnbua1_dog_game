@@ -21,17 +21,20 @@ const updatePositionHome = () => {
 
 	console.log(`Atualizou a casa para X: ${home_x}, Y: ${home_y}`);
 
+	// Atualizando a posição X e Y da casa
 	$('#casa').css('top', `${home_y}px`);
 	$('#casa').css('left', `${home_x}px`);
 }
 
 
+// Atualizando a pontuação atual do jogador
 const updatePointsPlayer = () => {
 	currentPointsPlayer++;
 
 	$("#points p").text(`Pontuação: ${currentPointsPlayer}`);
 }
 
+// Verificando se a div tem colisão com a outra
 const hasCollision = (firstElement, secondElement) => {
 	const firstElementAxisX = firstElement.offset().left;
 	const firstElementAxisY = firstElement.offset().top;
@@ -48,6 +51,7 @@ const hasCollision = (firstElement, secondElement) => {
 	)
 }
 
+// Movendo o cachorro pela tela
 const moveDog = (keyPressed) => {
 	const moveFunction = ((currentKey) => ({
 		'37': () => {
@@ -74,10 +78,12 @@ const moveDog = (keyPressed) => {
 	return directionFunction()
 }
 
+// Quando a tela estiver carregada, ele pega uma posição aleatória para casa
 $(document).ready(function(event) {
 	updatePositionHome();
 })
 
+// Toda vez que for na pressionado a tela
 $(document).keydown(function (event) {
 	const currentKeyPressed = event.which
 
