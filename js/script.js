@@ -29,9 +29,7 @@ const updatePositionHome = () => {
 
 // Atualizando a pontuação atual do jogador
 const updatePointsPlayer = () => {
-	currentPointsPlayer++;
-
-	$("#points p").text(`Pontuação: ${currentPointsPlayer}`);
+	$("#points p").text(`Pontuação: ${++currentPointsPlayer}`);
 }
 
 // Verificando se a div tem colisão com a outra
